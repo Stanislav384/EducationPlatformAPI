@@ -1,11 +1,11 @@
 # Используем официальный образ ASP.NET Core для запуска
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
 # Используем .NET SDK для сборки приложения
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["EducationPlatformAPI.csproj", "./"]
 RUN dotnet restore "./EducationPlatformAPI.csproj"
