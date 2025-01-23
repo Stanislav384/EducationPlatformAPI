@@ -18,6 +18,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.MapGet("/", () => "Education Platform API is running.");
 
 // app.UseHttpsRedirection();
 app.UseAuthorization();
